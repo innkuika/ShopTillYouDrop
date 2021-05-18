@@ -3,6 +3,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.idea
+
+
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,webstorm,node
