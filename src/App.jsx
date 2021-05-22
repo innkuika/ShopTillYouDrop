@@ -1,8 +1,7 @@
 import React, {useRef, useEffect} from 'react';
-import MyD3Component from "./MyD3Component.jsx";
-import './reset.css';
-import './App.css';
-import './dropdownsearch.css'
+import './css/reset.css';
+import './css/App.css';
+import './css/dropdownsearch.css'
 import {NavLink, Switch, Route} from 'react-router-dom';
 import SelectSearch from 'react-select-search';
 import fuzzySearch from "./fuzzySearch";

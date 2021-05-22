@@ -11,8 +11,8 @@ export default {
       port: 3000,
     },
     proxy: {
-      '/api': {
-        target: 'https://movies-ajax-server.profamenta.repl.co',
+      '/query': {
+        target: 'https://Final-Project-AJAX-Server-innkuika.ecs162instruct.repl.co',
         changeOrigin: true,
         secure: false,
         ws: true
