@@ -12,7 +12,8 @@ export default {
     },
     proxy: {
       '/query': {
-        target: 'https://Final-Project-AJAX-Server-innkuika.ecs162instruct.repl.co',
+        // target: 'https://Final-Project-AJAX-Server-innkuika.ecs162instruct.repl.co',
+        target:'http://localhost:4000',
         changeOrigin: true,
         secure: false,
         ws: true

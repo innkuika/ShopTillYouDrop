@@ -59,3 +59,26 @@ blue-title {
     color: #37A5E4;
 }
 
+button.nav {
+    color: white;
+    border-radius: 30px;
+    padding: 1em 1em;
+    font-size: larger;
+    font-weight: 600;
+    box-shadow: 0.1em 0.1em 0.3em gray;
+    height: 3em;
+    margin-top: 50px;
+}
+button.orange-button {
+    background-color: #EDA04B;
+}
+
+button.grey-button {
+    background-color: #73706e;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
