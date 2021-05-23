@@ -1,0 +1,143 @@
+* {
+    color: #333;
+}
+
+div.receipt {
+    background: url("/src/graphics/receipt.png") no-repeat center;
+    background-size: contain;
+    min-height: 90vh;
+    min-width: 80vw;
+}
+
+div.receipt-content-wrapper {
+    padding: 70px 10vw;
+}
+
+div.semi-bold-text {
+    font-weight: bolder;
+}
+
+div.location-text {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+div.receipt-head {
+    margin-bottom: -20px;
+}
+
+div.receipt-bottom {
+    margin-top: -10px;
+}
+
+.grid-container {
+    font-size: 12px;
+    display: grid;
+    text-align: left;
+    grid-template-columns: 0.5fr 1.6fr 0.9fr;
+    grid-template-rows: 0.6fr 0.5fr 0.6fr 1fr 1fr 1fr 1fr;
+    gap: 5px 10px;
+    grid-template-areas:
+    "receipt-head receipt-head receipt-head"
+    "receipt-header-qty receipt-header-description receipt-header-amount"
+    "receipt-bottom receipt-bottom receipt-bottom"
+    "tuition-qty tuition-description tuition-amount"
+    "fee-qty fee-description fee-amount"
+    ". . ."
+    ". subtotal-description subtotal-amount";
+}
+
+.receipt-head {
+    grid-area: receipt-head;
+}
+
+.receipt-bottom {
+    grid-area: receipt-bottom;
+}
+
+.receipt-header-qty {
+    grid-area: receipt-header-qty;
+    text-align: center;
+
+}
+
+.receipt-header-description {
+    grid-area: receipt-header-description;
+}
+
+.receipt-header-amount {
+    grid-area: receipt-header-amount;
+}
+
+.tuition-qty {
+    grid-area: tuition-qty;
+    text-align: center;
+
+}
+
+.tuition-description {
+    grid-area: tuition-description;
+}
+
+.tuition-amount {
+    grid-area: tuition-amount;
+}
+
+.fee-qty {
+    grid-area: fee-qty;
+    text-align: center;
+}
+
+.fee-description {
+    grid-area: fee-description;
+}
+
+.fee-amount {
+    grid-area: fee-amount;
+}
+
+.subtotal-description {
+    grid-area: subtotal-description;
+    text-align: right;
+}
+
+.subtotal-amount {
+    grid-area: subtotal-amount;
+}
+
+div.discount-wrapper {
+    display: flex;
+    flex-direction: row;
+    font-weight: bolder;
+    font-size: medium;
+    justify-content: space-between;
+}
+
+div.total-wrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.note-wrapper {
+    margin-top: 30px;
+    font-size: small;
+    display: grid;
+    grid-template-columns: 0.1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "note-content1 note-content2";
+}
+
+.note-content1 {
+    grid-area: note-content1;
+}
+
+.note-content2 {
+    grid-area: note-content2;
+    text-align: left;
+}
+

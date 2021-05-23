@@ -1,3 +1,50 @@
 div.price-tag{
-    background-image: url("/src/graphics/pricetag.png");
+    background: url("/src/graphics/pricetag.png") no-repeat center;
+    background-size: contain;
+    min-height: 60vh;
+    min-width: 80vw;
 }
+
+div.price-tag-content-wrapper{
+    padding: 50px 10vw;
+}
+
+div.price-tag {
+    margin: 40px 0;
+}
+
+div.bold-text {
+    color: #333;
+    font-weight: bolder;
+    font-size: medium;
+    margin: 20px 0;
+    text-shadow: 0.7px 0 #333;
+}
+
+div.light-text {
+    color: #333;
+    font-weight: lighter;
+    font-size: larger;
+    margin: 10px 0;
+}
+
+div.dotted-line{
+    color: #333;
+    font-weight: lighter;
+    font-size: larger;
+    margin: 10px 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+div.price-text {
+    font-weight: bolder;
+    font-size: x-large;
+    text-shadow: 1px 0 #333;
+}
+
+button.price {
+    margin-top: 10px;
+}
+

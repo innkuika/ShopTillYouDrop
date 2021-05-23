@@ -59,6 +59,13 @@ blue-title {
     color: #37A5E4;
 }
 
+green-title {
+    font-size: xx-large;
+    text-shadow: 0.4px 0 #51B667;
+    font-weight: bold;
+    color: #51B667;
+}
+
 button.nav {
     color: white;
     border-radius: 30px;
@@ -71,6 +78,10 @@ button.nav {
 }
 button.orange-button {
     background-color: #EDA04B;
+}
+
+button.green-button {
+    background-color: #51B667;
 }
 
 button.grey-button {

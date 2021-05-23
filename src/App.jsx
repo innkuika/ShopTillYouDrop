@@ -5,7 +5,9 @@ import './css/dropdownsearch.css'
 import {NavLink, Switch, Route} from 'react-router-dom';
 import Home from "./homePage";
 import PricePage from "./pricePage";
+import DiscountPage from "./discountsPage";
 import useAsyncFetch from "./useAsyncFetch";
+import TotalPage from "./totalPage";
 
 
 
@@ -26,6 +28,11 @@ function App() {
     const handleOptionChange = (e) => {
         setSelectedOption(e)
     }
+
+    const [selectedIncomeRange, setSelectedIncomeRange] = useState("");
+    const handleSelectedIncomeRangeChange = (e) => {
+        setSelectedIncomeRange(e)
+    }
     return (
         <div>
             <Switch>
@@ -34,6 +41,12 @@ function App() {
                 }}/>
                 <Route exact path='/price' component={() => {
                     return <PricePage id={selectedOption}/>
+                }}/>
+                <Route exact path='/discounts' component={() => {
+                    return <DiscountPage selectedIncomeRange={selectedIncomeRange} onChange={handleSelectedIncomeRangeChange}/>
+                }}/>
+                <Route exact path='/total' component={() => {
+                    return <TotalPage id={selectedOption} incomeRange={selectedIncomeRange}/>
                 }}/>
             </Switch>
         </div>
