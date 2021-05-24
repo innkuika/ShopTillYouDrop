@@ -141,3 +141,7 @@ div.total-wrapper {
     text-align: left;
 }
 
+button.total {
+    margin-top: -100px;
+}
+

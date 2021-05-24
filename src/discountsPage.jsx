@@ -3,7 +3,7 @@ import './css/reset.css';
 import './css/App.css';
 import './css/discount.css';
 import useAsyncFetch from "./useAsyncFetch";
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 import SelectSearch from "react-select-search";
 import fuzzySearch from "./fuzzySearch";
 
@@ -44,7 +44,11 @@ const DiscountPage = (props) => {
             mainPage(<button className='nav green-button'>
                 <NavLink exact activeClassName="current" to='/total' className='nav-link'>GO</NavLink>
             </button>))
-    } else {
+    } else if (!props.id) {
+        const history = useHistory();
+        history.push("/");
+        return (<div/>)
+    }else {
         return (
             mainPage(<button className='nav grey-button'>
                 GO

@@ -3,7 +3,7 @@ import './css/reset.css';
 import './css/App.css';
 import './css/total.css';
 import useAsyncFetch from "./useAsyncFetch";
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 
 const TotalPage = (props) => {
     function numberWithCommas(x) {
@@ -85,20 +85,22 @@ const TotalPage = (props) => {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
             </div>
             <button className='nav orange-button total'>
                 <NavLink exact activeClassName="current" to='/' className='nav-link'>START OVER</NavLink>
             </button>
         </div>)
+    } else if (!props.id) {
+        const history = useHistory();
+        history.push("/");
+        return(<div/>)
     } else {
-        return (<div className='page price'/>)
+        return (<div className='page price'>
+            <div className="loader"/>
+        </div>)
     }
-
 }
+
 
 export default TotalPage;

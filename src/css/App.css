@@ -76,6 +76,7 @@ button.nav {
     height: 3em;
     margin-top: 50px;
 }
+
 button.orange-button {
     background-color: #EDA04B;
 }
@@ -91,5 +92,42 @@ button.grey-button {
 .nav-link {
     text-decoration: none;
     color: white;
+}
+
+.loader {
+    border: 16px solid #8c8181;
+    border-radius: 50%;
+    border-top: 16px solid #dbd1d1;
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: -100%;
+    right: -100%;
+    left: -100%;
+    bottom: -100%;
+    margin: auto;
+    z-index: 0;
+
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 

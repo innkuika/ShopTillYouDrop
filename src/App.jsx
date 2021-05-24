@@ -43,7 +43,7 @@ function App() {
                     return <PricePage id={selectedOption}/>
                 }}/>
                 <Route exact path='/discounts' component={() => {
-                    return <DiscountPage selectedIncomeRange={selectedIncomeRange} onChange={handleSelectedIncomeRangeChange}/>
+                    return <DiscountPage id={selectedOption} selectedIncomeRange={selectedIncomeRange} onChange={handleSelectedIncomeRangeChange}/>
                 }}/>
                 <Route exact path='/total' component={() => {
                     return <TotalPage id={selectedOption} incomeRange={selectedIncomeRange}/>

@@ -3,7 +3,7 @@ import './css/reset.css';
 import './css/App.css';
 import './css/price.css';
 import useAsyncFetch from "./useAsyncFetch";
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 
 const PricePage = (props) => {
     function numberWithCommas(x) {
@@ -58,11 +58,18 @@ const PricePage = (props) => {
                 **YOU MAY BE ELIGIBLE FOR A DISCOUNT!
             </div>
             <button className='nav green-button price'>
-                <NavLink exact activeClassName="current" to='/discounts' className='nav-link'>SHOP FOR DISCOUNTS</NavLink>
+                <NavLink exact activeClassName="current" to='/discounts' className='nav-link'>SHOP FOR
+                    DISCOUNTS</NavLink>
             </button>
         </div>)
+    } else if (!props.id) {
+        const history = useHistory();
+        history.push("/");
+        return (<div/>)
     } else {
-        return (<div className='page price'/>)
+        return (<div className='page price'>
+            <div className="loader"/>
+        </div>)
     }
 
 }
