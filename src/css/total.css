@@ -10,7 +10,7 @@ div.receipt {
 }
 
 div.receipt-content-wrapper {
-    padding: 70px 10vw;
+    padding: 80px 10vw;
 }
 
 div.semi-bold-text {
@@ -19,7 +19,7 @@ div.semi-bold-text {
 
 div.location-text {
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 div.receipt-head {
@@ -122,12 +122,12 @@ div.total-wrapper {
 }
 
 .note-wrapper {
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: small;
     display: grid;
     grid-template-columns: 0.1fr 2fr;
     grid-template-rows: 1fr;
-    gap: 0px 0px;
+    gap: 0 0;
     grid-template-areas:
     "note-content1 note-content2";
 }
@@ -143,5 +143,43 @@ div.total-wrapper {
 
 button.total {
     margin-top: -100px;
+}
+
+
+@media only screen and (max-width: 374px) {
+    .note-wrapper {
+        font-size: xx-small;
+        margin-top: 15px;
+    }
+
+    .grid-container {
+        grid-template-rows: 0.6fr 0.5fr 0.6fr 0.7fr 0.7fr 0.7fr 0.7fr;
+        gap: 1px 1px;
+    }
+
+    div.discount-wrapper, div.total-wrapper {
+        font-size: small;
+        margin-top: 5px;
+    }
+
+    div.semi-bold-text {
+        font-weight: bold;
+        font-size: smaller;
+    }
+
+    div.location-text {
+        margin-bottom: 1px;
+        font-size: smaller;
+    }
+
+    div.receipt-content-wrapper {
+        padding: 120px 10vw;
+    }
+
+    div.receipt {
+        margin-top: -80px;
+        margin-bottom: -80px;
+    }
+
 }
 

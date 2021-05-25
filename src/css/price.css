@@ -48,3 +48,18 @@ button.price {
     margin-top: 10px;
 }
 
+@media only screen and (max-width: 374px) {
+    div.light-text {
+        font-size: large;
+    }
+
+    div.bold-text {
+        margin: 13px 0;
+    }
+
+    div.price-tag {
+        margin: 10px 0;
+    }
+}
+
+

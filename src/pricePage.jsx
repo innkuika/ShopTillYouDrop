@@ -67,8 +67,9 @@ const PricePage = (props) => {
         history.push("/");
         return (<div/>)
     } else {
-        return (<div className='page price'>
-            <div className="loader"/>
+        return (<div className='loading-page price'>
+            <div className="dot-collision"/>
+            <div>Calculating the sticker price...</div>
         </div>)
     }
 

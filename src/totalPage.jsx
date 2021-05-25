@@ -96,8 +96,9 @@ const TotalPage = (props) => {
         history.push("/");
         return(<div/>)
     } else {
-        return (<div className='page price'>
-            <div className="loader"/>
+        return (<div className='loading-page total'>
+            <div className="dot-collision"/>
+            <div>Calculating total price...</div>
         </div>)
     }
 }

@@ -2,6 +2,7 @@ import React, {useRef, useEffect, useState} from 'react';
 import './css/reset.css';
 import './css/App.css';
 import './css/dropdownsearch.css'
+import 'three-dots/dist/three-dots.css'
 import {NavLink, Switch, Route} from 'react-router-dom';
 import Home from "./homePage";
 import PricePage from "./pricePage";
@@ -32,6 +33,14 @@ function App() {
     const [selectedIncomeRange, setSelectedIncomeRange] = useState("");
     const handleSelectedIncomeRangeChange = (e) => {
         setSelectedIncomeRange(e)
+    }
+
+    if (options.length === 0) {
+        // server isn't ready yet, ask the user to comeback later
+        return (<div className='loading-page'>
+            <div className="dot-bricks"/>
+            <div>The server isn't ready yet, please come back later!</div>
+        </div>)
     }
     return (
         <div>

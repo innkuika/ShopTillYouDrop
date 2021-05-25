@@ -8,6 +8,22 @@ body {
     background-color: #F5F0E7;
 }
 
+.loading-page {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 15px;
+}
+
+.loading-page > div {
+    margin: 20px 0;
+}
+
 div.page {
     text-align: center;
     vertical-align: center;
@@ -94,23 +110,6 @@ button.grey-button {
     color: white;
 }
 
-.loader {
-    border: 16px solid #8c8181;
-    border-radius: 50%;
-    border-top: 16px solid #dbd1d1;
-    width: 90px;
-    height: 90px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-    position: fixed;
-    top: -100%;
-    right: -100%;
-    left: -100%;
-    bottom: -100%;
-    margin: auto;
-    z-index: 0;
-
-}
 
 /* Safari */
 @-webkit-keyframes spin {
