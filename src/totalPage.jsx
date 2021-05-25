@@ -3,7 +3,7 @@ import './css/reset.css';
 import './css/App.css';
 import './css/total.css';
 import useAsyncFetch from "./useAsyncFetch";
-import {NavLink, useHistory} from "react-router-dom";
+import {NavLink, Redirect, useHistory} from "react-router-dom";
 
 const TotalPage = (props) => {
     function numberWithCommas(x) {
@@ -18,7 +18,12 @@ const TotalPage = (props) => {
         console.log(error);
     }, []);
 
-    if (prices) {
+    if (prices && prices["status"] === 'error') {
+        return (<div className='loading-page price'>
+            <div className="dot-revolution"/>
+            <div>Sorry! We had trouble with the Department of Education data source. Try again?</div>
+        </div>)
+    } else if (prices) {
         return (<div className='page total'>
             <blue-title>TOTAL</blue-title>
             <div className='receipt'>
@@ -92,9 +97,9 @@ const TotalPage = (props) => {
             </button>
         </div>)
     } else if (!props.id) {
-        const history = useHistory();
-        history.push("/");
-        return(<div/>)
+        return (
+            <Redirect to="/"/>
+        )
     } else {
         return (<div className='loading-page total'>
             <div className="dot-collision"/>
