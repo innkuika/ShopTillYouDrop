@@ -8,12 +8,12 @@ export default {
   plugins: [reactRefresh()],
   server: {
     hmr: {
-      port: 3000,
+      port: 443,
     },
     proxy: {
       '/query': {
-        // target: 'https://Final-Project-AJAX-Server-innkuika.ecs162instruct.repl.co',
-        target:'http://localhost:4000',
+        target: 'https://Final-Project-AJAX-Server-innkuika.ecs162instruct.repl.co',
+        // target:'http://localhost:4000',
         changeOrigin: true,
         secure: false,
         ws: true
