@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './css/reset.css';
 import './css/App.css';
 import './css/discount.css';
-import useAsyncFetch from "./useAsyncFetch";
+import discount from './graphics/discount.png'
 import {NavLink, useHistory} from "react-router-dom";
 import SelectSearch from "react-select-search";
 import fuzzySearch from "./fuzzySearch";
@@ -23,7 +23,7 @@ const DiscountPage = (props) => {
                 <p>Let's see if you qualify for any discounts.</p>
             </div>
             <div className='center-img'>
-                <img src="/src/graphics/discount.png"/>
+                <img src={discount}/>
             </div>
             <div className='text-content-wrap'>
                 <div className='dropdown-title'>

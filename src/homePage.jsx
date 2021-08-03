@@ -2,6 +2,7 @@ import React from 'react';
 import './css/reset.css';
 import './css/App.css';
 import './css/dropdownsearch.css'
+import shoppingcart from './graphics/shoppingcart.png'
 import {NavLink} from 'react-router-dom';
 import SelectSearch from 'react-select-search';
 import fuzzySearch from "./fuzzySearch";
@@ -16,7 +17,7 @@ const Home = (props) => {
                     className='italic-bold'>real</span> cost of college, for schools across the country.</p>
             </div>
             <div className='center-img'>
-                <img src="/src/graphics/shoppingcart.png"/>
+                <img src={shoppingcart}/>
             </div>
             <div className='bold-text home'>
                 Start typing to pick a school
