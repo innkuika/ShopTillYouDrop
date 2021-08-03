@@ -18,7 +18,7 @@ function App() {
     const [options, setOptions] = useState([]);
 
     // call the custom fetch hook, passing it the callback functions that it can use
-    useAsyncFetch("query/getOptions", {}, (result) => {
+    useAsyncFetch(`${import.meta.env.VITE_API_URL}/query/getOptions`, {}, (result) => {
         console.log(result)
         setOptions(result);
     }, (error) => {

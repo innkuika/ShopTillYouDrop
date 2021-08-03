@@ -11,7 +11,7 @@ const PricePage = (props) => {
     }
 
     const [prices, setPrices] = useState(null)
-    useAsyncFetch(`query/getPrice?id=${props.id}`, {}, (result) => {
+    useAsyncFetch(`${import.meta.env.VITE_API_URL}/query/getPrice?id=${props.id}`, {}, (result) => {
         console.log(result);
         setPrices(result);
     }, (error) => {
