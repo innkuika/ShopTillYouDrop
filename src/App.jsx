@@ -3,7 +3,7 @@ import './css/reset.css';
 import './css/App.css';
 import './css/dropdownsearch.css'
 import 'three-dots/dist/three-dots.css'
-import {NavLink, Switch, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import Home from "./homePage";
 import PricePage from "./pricePage";
 import DiscountPage from "./discountsPage";
