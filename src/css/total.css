@@ -7,10 +7,13 @@ div.receipt {
     background-size: contain;
     min-height: 90vh;
     min-width: 80vw;
+    display: flex;
+    justify-content: center;
 }
 
 div.receipt-content-wrapper {
     padding: 80px 10vw;
+    max-width: 400px;
 }
 
 div.semi-bold-text {
@@ -174,6 +177,7 @@ button.total {
 
     div.receipt-content-wrapper {
         padding: 120px 10vw;
+        max-width: 100%;
     }
 
     div.receipt {
