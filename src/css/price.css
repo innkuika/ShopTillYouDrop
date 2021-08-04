@@ -7,10 +7,13 @@ div.price-tag{
 
 div.price-tag-content-wrapper{
     padding: 50px 10vw;
+    max-width: 300px;
 }
 
 div.price-tag {
     margin: 40px 0;
+    display: flex;
+    justify-content: center;
 }
 
 div.bold-text {
