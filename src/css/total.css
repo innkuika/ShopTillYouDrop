@@ -13,7 +13,7 @@ div.receipt {
 
 div.receipt-content-wrapper {
     padding: 80px 10vw;
-    max-width: 350px;
+    max-width: 300px;
 }
 
 div.semi-bold-text {
@@ -149,7 +149,7 @@ button.total {
 }
 
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 426px) {
     .note-wrapper {
         font-size: xx-small;
         margin-top: 15px;
