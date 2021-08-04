@@ -177,13 +177,14 @@ button.total {
 
     div.receipt-content-wrapper {
         padding: 120px 10vw;
-        max-width: 80vw;
-    }
-
-    div.receipt {
-        margin-top: -80px;
-        margin-bottom: -80px;
+        max-width: 70vw;
     }
 
 }
 
+@media only screen and (max-width: 321px) {
+    div.receipt {
+        margin-top: -80px;
+        margin-bottom: -80px;
+    }
+}
