@@ -149,7 +149,7 @@ button.total {
 }
 
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 426px) {
     .note-wrapper {
         font-size: xx-small;
         margin-top: 15px;
